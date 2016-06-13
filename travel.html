@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Travel Log</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Places You've Been</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="container" id="contentbody">
+     <h1>Places you've been</h1>
+     <div class="row">
+       <div class="col-md-6">
+         <h2>Add a destination:</h2>
+         <form class="form-control" id="places">
+          <label for="user-first-name">Please Enter your First Name:</label>
+         <input type="text" name="user-first-name" id="user-first-name">
+
+         <label for="user-last-name">Please enter your Last Name:</label>
+        <input type="text" name="user-last-name" id="user-last-name">
+
+        <label for="user-country">Please enter a country you've traveled to:</label>
+        <input type="text" name="user-country" id="user-country">
+
+        <label for="user-city">Please enter city you visited while there:</label>
+        <input type="text" name="user-city" id="user-city">
+
+        <label for="user-landmark">Please enter your favorite spot in that city or a specific lanfmark it's known for:</label>
+        <input type="text" name="user-landmark" id="user-landmark">
+
+        <label for="user-dates">Please enter the dates that were traveling:</label>
+        <input type="text" name="user-dates" id="user-dates">
+        <button type="button" name="btn btn-default">SUBMIT</button>
+         </form>
+         <ul id="show-country">
+         </ul>
+       </div>
+
+        <div class="col-md-6">
+         <div id="show-contact">
+          <ul>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+
+    </footer>
+    <!-- javascript for speedier loading -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/scripts2.js"></script>
+  </body>
+</html>
