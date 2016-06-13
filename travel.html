@@ -31,32 +31,50 @@
      <div class="row">
        <div class="col-md-6">
          <h2>Add a destination:</h2>
-         <form class="form-control" id="places">
-          <label for="user-first-name">Please Enter your First Name:</label>
-         <input type="text" name="user-first-name" id="user-first-name">
+         <form id="places">
+           <div class="form-group">
+            <label for="user-first-name">Please Enter your First Name:</label>
+            <input class="form-control" type="text" name="user-first-name" id="user-first-name">
+          </div>
+            <div class="form-group">
+            <label for="user-last-name">Please enter your Last Name:</label>
+            <input class="form-control" type="text" name="user-last-name" id="user-last-name">
+          </div>
+          <div class="new-destination">
+            <div class="form-group">
+            <label for="user-country">Please enter a country you've traveled to:</label>
+            <input class="form-control new-country" type="text" name="user-country" id="user-country">
+          </div>
+            <div class="form-group">
+            <label for="user-city">Please enter city you visited while there:</label>
+            <input class="form-control new-city" type="text" name="user-city" id="user-city">
+          </div>
+            <div class="form-group">
+            <label for="user-landmark">Please enter your favorite spot in that city or a specific lanfmark it's known for:</label>
+            <input class="form-control new-landmark" type="text" name="user-landmark" id="user-landmark">
+          </div>
+            <div class="form-group">
+            <label for="user-dates">Please enter the dates that were traveling:</label>
+            <input class="form-control new-dates" type="text" name="user-dates" id="user-dates">
+          </div>
+        </div>
+        <span class="btn btn-primary" id="add-destination">Other Destinations?</span>
+        <button type="submit" name="btn btn-default">SUBMIT</button>
 
-         <label for="user-last-name">Please enter your Last Name:</label>
-        <input type="text" name="user-last-name" id="user-last-name">
-
-        <label for="user-country">Please enter a country you've traveled to:</label>
-        <input type="text" name="user-country" id="user-country">
-
-        <label for="user-city">Please enter city you visited while there:</label>
-        <input type="text" name="user-city" id="user-city">
-
-        <label for="user-landmark">Please enter your favorite spot in that city or a specific lanfmark it's known for:</label>
-        <input type="text" name="user-landmark" id="user-landmark">
-
-        <label for="user-dates">Please enter the dates that were traveling:</label>
-        <input type="text" name="user-dates" id="user-dates">
-        <button type="button" name="btn btn-default">SUBMIT</button>
          </form>
          <ul id="show-country">
          </ul>
        </div>
 
         <div class="col-md-6">
-         <div id="show-contact">
+         <div id="travel-info">
+           <h2></h2>
+           <p>First name: <span class="first-name"></span></p>
+           <p>Last name: <span class="last-name"></span></p>
+           <p>Addresses:</p>
+           <ul id="addresses">
+
+           </ul>
           <ul>
           </ul>
         </div>
