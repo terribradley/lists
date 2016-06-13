@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Travel Log</title>
+    <title>To Do List</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
@@ -28,7 +28,7 @@
     </nav>
     <div class="container" id="contentbody">
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-4">
           <form id="newlist">
             <div class="form-group">
               <label for="list-name">List Name:</label>
@@ -37,15 +37,25 @@
             <div id="tasks">
               <div class="form-group">
                 <label for="first-task">Tasks</label>
-                <input type="text" class="list-task form-control" id="first-task">
+                <input type="text" class="list-task form-control">
               </div>
             </div>
             <button type="button" id="newtask-sub" class="btn btn-primary">Add Task</button>
             <button type="submit" id="newlist-sub" class="btn btn-primary">Submit</button>
           </form>
         </div>
-        <div class="col-md-7">
-          <div id="accordion" class="panel-group">
+        <div class="col-md-4">
+          <div id="lists" class="panel-group">
+            <ul id="list-item">
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div id="tasks-list" class="panel-group">
+            <ul id="task-item">
+
+            </ul>
           </div>
         </div>
       </div>

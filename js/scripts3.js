@@ -4,45 +4,36 @@ function List(name){
 }
 
 function Task(description) {
-  this.description = "";
+  this.description = description;
 }
-
-var accPanel = function(title, content){
-  var html = '<div class="panel panel-default">'+
-             '<div class="panel-heading">' +
-             '<h4 class="panel-title">' +
-             '<a data-toggle="collapse" data-parent="#accordion" href="#'+
-             'user' + title +
-             '">'+ title + '</a>' +
-             '</h4>' +
-             '</div>' +
-             '<div id="collapseOne" class="panel-collapse collapse">' +
-             '<div class="panel-body">' + content +
-             '</div>' +
-             '</div>' +
-             '</div>'
-};
 
 
 $(function(){
 
   $('#newtask-sub').click(function(event){
     $('#tasks').append('<div class="form-group">' +
-                       '<input type="text" class="list-task form-control">' +
-                       '</div>')
+                       '<input type="text" class="form-control list-task">' +
+                       '</div>');
   });
 
 
   $('#newlist').submit(function(event){
     event.preventDefault();
-
-    var myList = new List($('#list-name').val());
+    var myList = new List("<li>" + $('#list-name').val() + "</li>");
+    debugger;
     $('#tasks').each(function(){
-      var myTask = new Task($(this).find('input.list-task').val());
+      var taskItem = $(this).find('input.list-task').val();
+      var myTask = new Task(taskItem);
       myList.tasks.push(myTask);
     });
 
-    $('#lists').append('<h2>' + myList.name + '</h2>');
+    $('#lists').append(myList.name);
 
+    $('#lists').last().click(function(){
+      $("ul#task-item").text("");
+      myList.tasks.forEach(function(task){
+        $('ul#task-item').append("<li>" + task.description + "</li>");
+      })
+    });
   });
 })
